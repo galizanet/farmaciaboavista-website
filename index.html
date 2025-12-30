@@ -33,6 +33,9 @@
         <a href="#servicos">Serviços</a>
         <a href="#como-pedir">Como pedir</a>
         <a href="#entrega">Entrega</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#farmacia-popular">Farmácia Popular</a>
         <a href="#contato">Contato</a>
       </nav>
 
@@ -44,56 +47,61 @@
   </header>
 
   <main id="conteudo">
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="badge">Atendimento online • Entrega em Irecê</p>
-          <h1>Peça pelo WhatsApp e receba em casa com rapidez.</h1>
-          <p class="lead">
-            Envie sua receita ou lista de produtos no WhatsApp.
-            Nossa equipe confirma disponibilidade, preço e entrega.
-          </p>
 
-          <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" href="https://wa.me/5574999610046?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Farmácia%20Boa%20Vista."
-               target="_blank" rel="noopener">Iniciar atendimento no WhatsApp</a>
-            <a class="btn btn--ghost btn--lg" href="tel:+5574999610046">Ligar agora</a>
-          </div>
+<section class="hero hero--photo">
+  <div class="hero__photo-wrap">
+    <img src="assets/family-hero.png" alt="Família cuidando da saúde com carinho, incluindo idoso" class="hero__photo" />
+    <div class="hero__overlay"></div>
+  </div>
 
-          <div class="hero__trust">
-            <div class="trust-item">
-              <div class="trust-item__title">WhatsApp</div>
-              <div class="trust-item__value">+55 74 99961‑0046</div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-item__title">Local</div>
-              <div class="trust-item__value">Centro • Irecê‑BA</div>
-            </div>
-            <div class="trust-item">
-              <div class="trust-item__title">Entrega</div>
-              <div class="trust-item__value">Toda a cidade</div>
-            </div>
-          </div>
+  <div class="container hero__inner hero__inner--overlay">
+    <div class="hero__copy">
+      <p class="badge">2 lojas em Irecê • Atendimento humano</p>
+      <h1>Cuidado com a sua saúde, para todas as gerações.</h1>
+      <p class="lead">
+        Família, confiança e atendimento próximo. Peça pelo WhatsApp e receba em casa,
+        com a Farmácia Boa Vista.
+      <div class="popular">
+  <img src="assets/farmacia-popular.png" alt="Logo Farmácia Popular" class="popular__logo" loading="lazy" />
+  <div class="popular__text">
+    <div class="popular__title">Atendimento Farmácia Popular</div>
+    <div class="popular__desc">Ajudamos você com o passo a passo e documentação necessária.</div>
+  </div>
+  <a class="btn btn--ghost popular__cta"
+     href="https://wa.me/5574999610046?text=Olá!%20Quero%20atendimento%20pelo%20programa%20Farmácia%20Popular.%20Quais%20documentos%20preciso%20levar%3F"
+     target="_blank" rel="noopener">Tirar dúvidas</a>
+</div>
+</p>
 
-          <p class="micro">
-            <strong>Atenção:</strong> medicamentos sujeitos a prescrição só são vendidos mediante receita, conforme legislação.
-          </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg"
+           href="https://wa.me/5574999610046?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Farmácia%20Boa%20Vista."
+           target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+        <a class="btn btn--ghost btn--lg" href="#contato">Ver lojas</a>
+      </div>
+
+      <div class="hero__trust">
+        <div class="trust-item">
+          <div class="trust-item__title">WhatsApp</div>
+          <div class="trust-item__value">+55 74 99961‑0046</div>
         </div>
-
-        <div class="hero__card" role="region" aria-label="Atalho de pedido">
-          <h2>Pedido rápido</h2>
-          <ol class="steps">
-            <li><strong>Abra o WhatsApp</strong> pelo botão abaixo.</li>
-            <li><strong>Envie</strong> foto da receita ou lista de itens.</li>
-            <li><strong>Confirme</strong> nome, endereço e forma de pagamento.</li>
-            <li><strong>Receba</strong> em casa em Irecê.</li>
-          </ol>
-          <a class="btn btn--primary" href="https://wa.me/5574999610046?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Farmácia%20Boa%20Vista."
-             target="_blank" rel="noopener">Abrir WhatsApp</a>
-          <p class="micro muted">Dica: adicione a foto da receita para agilizar.</p>
+        <div class="trust-item">
+          <div class="trust-item__title">Lojas</div>
+          <div class="trust-item__value">Boa Vista • Centro</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__title">Entrega</div>
+          <div class="trust-item__value">Toda Irecê</div>
         </div>
       </div>
-    </section>
+
+      <p class="micro">
+        <strong>Atenção:</strong> medicamentos sujeitos a prescrição exigem receita válida.
+      </p>
+    </div>
+  </div>
+</section>
+
 
     <section id="servicos" class="section">
       <div class="container">
@@ -101,6 +109,8 @@
           <h2>O que você encontra aqui</h2>
           <p class="muted">Selecione o que você precisa e peça pelo WhatsApp.</p>
         </div>
+
+        <img class="section__img" src="assets/services-health.svg" alt="Categorias de saúde e bem-estar" loading="lazy" />
 
         <div class="grid cards">
           <article class="card">
@@ -186,7 +196,165 @@
       </div>
     </section>
 
-    <section id="contato" class="section section--alt">
+
+
+<section id="ofertas" class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Ofertas da semana</h2>
+      <p class="muted">Promoções estáticas para dar vida ao site. Confirme estoque e valores no WhatsApp.</p>
+    </div>
+
+    <div class="grid offers">
+      <article class="promo promo--vit">
+        <div class="promo__top">
+          <div class="promo__cat" title="Bem‑estar">
+            <span class="promo__icon" aria-hidden="true">💪</span>
+            <span>Bem‑estar</span>
+          </div>
+          <div class="promo__badge" aria-label="Desconto">-20%</div>
+        </div>
+        <h3 class="promo__title">Vitamina C 1g (20 comp.)</h3>
+        <p class="promo__desc">Ideal para rotina de imunidade. *Exemplo de oferta.</p>
+        <div class="promo__price">
+          <span class="promo__old">R$ 49,90</span>
+          <span class="promo__new">R$ 39,90</span>
+        </div>
+        <a class="btn btn--primary promo__cta"
+          href="https://wa.me/5574999610046?text=Olá!%20Quero%20a%20oferta%20da%20Vitamina%20C%201g%20(20%20comp.).%20Qual%20o%20preço%20e%20a%20disponibilidade%20hoje%3F"
+          target="_blank" rel="noopener">Pedir no WhatsApp</a>
+        <p class="promo__fine micro muted">*Valores ilustrativos — confirme no atendimento.</p>
+      </article>
+
+      <article class="promo promo--hig">
+        <div class="promo__top">
+          <div class="promo__cat" title="Higiene">
+            <span class="promo__icon" aria-hidden="true">🧴</span>
+            <span>Higiene</span>
+          </div>
+          <div class="promo__badge" aria-label="Desconto">-15%</div>
+        </div>
+        <h3 class="promo__title">Protetor Solar FPS 50</h3>
+        <p class="promo__desc">Proteção diária para toda a família. *Exemplo de oferta.</p>
+        <div class="promo__price">
+          <span class="promo__old">R$ 79,90</span>
+          <span class="promo__new">R$ 67,90</span>
+        </div>
+        <a class="btn btn--primary promo__cta"
+          href="https://wa.me/5574999610046?text=Olá!%20Quero%20a%20oferta%20do%20Protetor%20Solar%20FPS%2050.%20Qual%20o%20preço%20e%20a%20disponibilidade%20hoje%3F"
+          target="_blank" rel="noopener">Pedir no WhatsApp</a>
+        <p class="promo__fine micro muted">*Valores ilustrativos — confirme no atendimento.</p>
+      </article>
+
+      <article class="promo promo--dor">
+        <div class="promo__top">
+          <div class="promo__cat" title="Saúde">
+            <span class="promo__icon" aria-hidden="true">🩹</span>
+            <span>Saúde</span>
+          </div>
+          <div class="promo__badge" aria-label="Desconto">-10%</div>
+        </div>
+        <h3 class="promo__title">Kit Curativos + Antisséptico</h3>
+        <p class="promo__desc">Para primeiros cuidados em casa. *Exemplo de oferta.</p>
+        <div class="promo__price">
+          <span class="promo__old">R$ 34,90</span>
+          <span class="promo__new">R$ 31,40</span>
+        </div>
+        <a class="btn btn--primary promo__cta"
+          href="https://wa.me/5574999610046?text=Olá!%20Quero%20a%20oferta%20do%20Kit%20Curativos%20%2B%20Antiss%C3%A9ptico.%20Qual%20o%20pre%C3%A7o%20e%20a%20disponibilidade%20hoje%3F"
+          target="_blank" rel="noopener">Pedir no WhatsApp</a>
+        <p class="promo__fine micro muted">*Valores ilustrativos — confirme no atendimento.</p>
+      </article>
+
+      <article class="promo promo--delivery">
+        <div class="promo__top">
+          <div class="promo__cat" title="Entrega">
+            <span class="promo__icon" aria-hidden="true">🛵</span>
+            <span>Entrega</span>
+          </div>
+          <div class="promo__badge promo__badge--solid" aria-label="Destaque">Delivery</div>
+        </div>
+        <h3 class="promo__title">Peça pelo WhatsApp</h3>
+        <p class="promo__desc">Envie sua lista/receita e confirme endereço + pagamento.</p>
+        <div class="promo__price promo__price--note">
+          <span class="promo__new">Entrega em Irecê</span>
+        </div>
+        <a class="btn btn--primary promo__cta"
+          href="https://wa.me/5574999610046?text=Olá!%20Quero%20fazer%20um%20pedido%20com%20entrega%20em%20Irec%C3%AA.%20Pode%20me%20ajudar%3F"
+          target="_blank" rel="noopener">Iniciar pedido</a>
+        <p class="promo__fine micro muted">Prazo e taxa (se houver) são confirmados no atendimento.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="avaliacoes" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Depoimentos & avaliações</h2>
+          <p class="muted">O que os clientes dizem. (Em breve: integração automática com Google Reviews.)</p>
+        </div>
+
+        <div class="grid testimonials">
+          <article class="testimonial">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="quote">“Atendimento rápido e muito atencioso. Pedi pelo WhatsApp e chegou certinho.”</p>
+            <p class="who">— Cliente de Irecê</p>
+          </article>
+
+          <article class="testimonial">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="quote">“Preço bom e entrega super ágil. Recomendo!”</p>
+            <p class="who">— Cliente de Irecê</p>
+          </article>
+
+          <article class="testimonial">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="quote">“Tirei dúvidas sobre medicamentos e fui muito bem orientado.”</p>
+            <p class="who">— Cliente de Irecê</p>
+          </article>
+        </div>
+
+        <div class="reviews-cta">
+          <a class="btn btn--primary" href="https://share.google/zecxqayV5tbonP5uA"
+             target="_blank" rel="noopener">Ver Google Reviews</a>
+          <a class="btn btn--ghost" href="https://www.facebook.com/farmaciaboavistairece"
+             target="_blank" rel="noopener">Ver no Facebook</a>
+          <span class="muted micro">Se você já tem a ficha no Google (perfil da empresa), me mande o link que eu deixo este botão direto em “Avaliações”.</span>
+        </div>
+      </div>
+    </section>
+
+<section id="farmacia-popular" class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Farmácia Popular</h2>
+      <p class="muted">Conte com a gente para orientar o seu atendimento e facilitar o processo.</p>
+    </div>
+
+    <div class="popular-section card">
+      <div class="popular-section__left">
+        <img src="assets/farmacia-popular.png" alt="Farmácia Popular" class="popular-section__logo" loading="lazy" />
+      </div>
+      <div class="popular-section__right">
+        <h3>Como funciona?</h3>
+        <p>O programa oferece acesso a medicamentos e itens de saúde conforme regras e disponibilidade. A equipe confirma na hora o que se aplica ao seu caso.</p>
+        <ul class="list popular-section__list">
+          <li><span>✅ Atendimento guiado</span><span class="muted">no WhatsApp</span></li>
+          <li><span>✅ Conferência de documentos</span><span class="muted">na loja</span></li>
+          <li><span>✅ Orientação</span><span class="muted">para cada item</span></li>
+        </ul>
+        <div class="inline-cta">
+          <a class="btn btn--primary"
+             href="https://wa.me/5574999610046?text=Olá!%20Quero%20ser%20atendido%20pelo%20programa%20Farmácia%20Popular.%20Pode%20me%20orientar%3F"
+             target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <span class="micro muted">Leve seus documentos e receita (se aplicável). A equipe confirma os requisitos.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="section section--alt">
       <div class="container">
         <div class="section__head">
           <h2>Contato</h2>
@@ -207,22 +375,31 @@
             </div>
 
             <div class="contact__card">
-              <h3>Endereço</h3>
-              <p class="muted">
-                Irecê‑BA (Centro).<br/>
-                <span class="micro">*Atualize o endereço exato no arquivo <code>README</code> quando confirmar.</span>
-              </p>
-              <a class="link" href="https://www.google.com/maps/search/?api=1&query=Farm%C3%A1cia%20Boa%20Vista%20Irec%C3%AA"
-                 target="_blank" rel="noopener">Abrir no Google Maps</a>
-            </div>
-          </div>
+  <h3>Nossas lojas em Irecê</h3>
+  <div class="stores">
+    <div class="store">
+      <div class="store__title">Loja 1 — Boa Vista</div>
+      <div class="store__addr">Praça Ayrton Senna, 116, Boa Vista, Irecê‑BA • CEP 44862‑860</div>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Ayrton%20Senna%2C%20116%2C%20Boa%20Vista%2C%20Irec%C3%AA%2C%20Bahia%2C%2044862-860"
+         target="_blank" rel="noopener">Abrir no Google Maps</a>
+    </div>
+    <div class="store">
+      <div class="store__title">Loja 2 — Centro</div>
+      <div class="store__addr">Praça Dr. Mário Dourado Sobrinho, 32, Irecê‑BA • CEP 44860‑165</div>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Dr.%20M%C3%A1rio%20Dourado%20Sobrinho%2C%2032%2C%20Irec%C3%AA%2C%20Bahia%2C%2044860-165"
+         target="_blank" rel="noopener">Abrir no Google Maps</a>
+    </div>
+  </div>
+  <p class="micro muted">WhatsApp (para as duas lojas): <strong>+55 74 99961‑0046</strong></p>
+</div>
+</div>
 
           <div class="contact__aside card">
             <h3>Horário</h3>
             <ul class="list">
-              <li><span>Seg–Sex</span><span>07:00 – 20:00</span></li>
-              <li><span>Sábado</span><span>07:30 – 19:30</span></li>
-              <li><span>Domingo</span><span>Fechado</span></li>
+              <li><span>Seg–Sex</span><span>07:00 – 21:00</span></li>
+              <li><span>Sábado</span><span>07:00 – 19:00</span></li>
+              <li><span>Domingo</span><span>07:00 – 19:00</span></li>
             </ul>
             <p class="micro muted">Horários podem mudar em feriados — confirme no WhatsApp.</p>
           </div>
@@ -253,6 +430,9 @@
       <div class="footer__links">
         <a href="#servicos">Serviços</a>
         <a href="#como-pedir">Como pedir</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#farmacia-popular">Farmácia Popular</a>
         <a href="#contato">Contato</a>
         <a href="https://wa.me/5574999610046" target="_blank" rel="noopener">WhatsApp</a>
       </div>

@@ -71,3 +71,23 @@ Cloudflare vai orientar a configuração de DNS.
 ---
 
 Feito para publicação rápida e evolução incremental.
+
+
+## ✨ Novas seções
+
+- **Ofertas da semana**: cards estáticos para dar vida (atualize os textos semanalmente)
+- **Depoimentos & avaliações**: placeholders + botão para abrir no Google Maps/Reviews
+
+> Se você tiver o link direto da ficha do Google (Google Business Profile), cole no `index.html` no botão "Ver no Google (Maps/Reviews)".
+
+
+## ⭐ Google Reviews
+
+Link: https://share.google/zecxqayV5tbonP5uA
+
+
+## 🏥 Farmácia Popular
+
+- Logo: `assets/farmacia-popular.png`
+- Seção: `#farmacia-popular`
+- CTA: direciona para WhatsApp para orientar documentos/requisitos.

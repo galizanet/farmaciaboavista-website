@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Farmácia Boa Vista">
+  <rect width="256" height="256" rx="48" fill="#ffffff"/>
+  <g transform="translate(28 28)">
+    <rect x="0" y="0" width="200" height="200" rx="40" fill="#fff1f2" stroke="#e5e7eb" stroke-width="4"/>
+    <g transform="translate(100 100)">
+      <rect x="-22" y="-70" width="44" height="140" rx="18" fill="#d7262b"/>
+      <rect x="-70" y="-22" width="140" height="44" rx="18" fill="#d7262b"/>
+    </g>
+    <text x="100" y="180" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="18" fill="#111827" font-weight="800">
+      Boa Vista
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,117 @@
+name: PR Quality Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: "3.13"
+  SECRET_SCAN_TIMEOUT: 300s # pragma: allowlist secret
+
+jobs:
+  secret-scan:
+    name: Secret Scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7.0.0
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6.3.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install and cache uv
+        uses: astral-sh/setup-uv@v8.3.0
+        with:
+          version: "latest"
+
+      - name: Run detect-secrets
+        run: |
+          args=(--no-verify)
+          if [[ -f .secrets.baseline ]]; then
+            args+=(--baseline .secrets.baseline)
+          else
+            echo "::notice::No .secrets.baseline found; scanning tracked files without a baseline"
+          fi
+
+          timeout "$SECRET_SCAN_TIMEOUT" bash -c '
+            git ls-files -z | xargs -0 -r uv run --with detect-secrets detect-secrets-hook "$@" --
+          ' bash "${args[@]}"
+
+  pre-commit:
+    name: Pre-commit Hooks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.0
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6.3.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install and cache uv
+        uses: astral-sh/setup-uv@v8.3.0
+        with:
+          version: "latest"
+
+      - name: Run pre-commit hooks
+        run: uv run --with pre-commit pre-commit run --all-files --show-diff-on-failure
+
+  quality-gate:
+    name: Quality Gate
+    runs-on: ubuntu-latest
+    needs: [secret-scan, pre-commit]
+    if: always()
+    steps:
+      - name: Check job statuses
+        run: |
+          failed=0
+
+          check_job() {
+            local name="$1"
+            local result="$2"
+
+            if [[ "$result" != "success" ]]; then
+              echo "::error::$name failed: $result"
+              failed=1
+            else
+              echo "$name: $result"
+            fi
+          }
+
+          check_job "Secret Scan" "${{ needs.secret-scan.result }}"
+          check_job "Pre-commit" "${{ needs.pre-commit.result }}"
+
+          if [[ "$failed" -ne 0 ]]; then
+            echo "Quality gate failed"
+            exit 1
+          fi
+
+          echo "Quality gate passed"
+
+      - name: Print summary
+        run: |
+          {
+            echo "## Quality Gate Summary"
+            echo ""
+            echo "| Check | Status |"
+            echo "|-------|--------|"
+            echo "| Secret Scan | ${{ needs.secret-scan.result }} |"
+            echo "| Pre-commit | ${{ needs.pre-commit.result }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
